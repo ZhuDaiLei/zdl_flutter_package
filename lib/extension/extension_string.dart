@@ -15,10 +15,10 @@ extension ExtensionString on String {
   String get dealNull => this.isNull ? '' : this;
 
   ///String转int
-  int get parseInt => int.tryParse(this.dealNull);
+  int get toInt => int.tryParse(this.dealNull);
 
   ///String转double
-  double get parseDouble => double.tryParse(this.dealNull);
+  double get toDouble => double.tryParse(this.dealNull);
 
   ///对字符串进行md5加密
   String get encodeMd5 =>
@@ -41,7 +41,7 @@ extension ExtensionString on String {
   bool _regExp(String source) => RegExp(source).hasMatch(this.dealNull);
 
   ///验证是否是数字
-  bool get isNumber => null != this.parseDouble;
+  bool get isNumber => null != this.toDouble;
 
   ///验证是否是电话号码
   bool get isPhoneNumber => _regExp(r'^1[3-9][0-9]\d{8}$');

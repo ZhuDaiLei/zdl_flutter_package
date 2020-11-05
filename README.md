@@ -1,6 +1,7 @@
-# zdlflutterpackage
+# zdl_flutter_package
 
 A new Flutter package.
+个人开发用package
 
 ## Getting Started
 

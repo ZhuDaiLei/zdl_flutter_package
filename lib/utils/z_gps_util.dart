@@ -25,6 +25,6 @@ class ZGPSUtil {
     double s = 2 *
         asin(sqrt(pow(sin(a / 2), 2) +
             cos(radLat1) * cos(radLat2) * pow(sin(b / 2), 2)));
-    return (s * _EARTH_RADIUS).toStringAsFixed(3).parseDouble;
+    return (s * _EARTH_RADIUS).toStringAsFixed(3).toDouble;
   }
 }
