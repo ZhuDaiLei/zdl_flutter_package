@@ -6,7 +6,7 @@ import 'package:flutter/widgets.dart';
 /// email zdl328465042@163.com
 /// description 复制pub开源控件，减少导包数量
 /// url https://pub.flutter-io.cn/packages/toast
-class Toast {
+class ZToast {
   static final int LENGTH_SHORT = 1;
   static final int LENGTH_LONG = 2;
   static final int BOTTOM = 0;
@@ -83,7 +83,7 @@ class ToastView {
     _isVisible = true;
     overlayState.insert(_overlayEntry);
     await new Future.delayed(
-        Duration(seconds: duration == null ? Toast.LENGTH_SHORT : duration));
+        Duration(seconds: duration == null ? ZToast.LENGTH_SHORT : duration));
     dismiss();
   }
 

@@ -21,7 +21,7 @@ export 'package:zdl_flutter_package/ui/widget/z_text_variable.dart';
 export 'package:zdl_flutter_package/ui/widget/z_visibility_extend.dart';
 
 ///utils
-export 'package:zdl_flutter_package/utils/copy/toast.dart';
+export 'package:zdl_flutter_package/utils/copy/z_toast.dart';
 export 'package:zdl_flutter_package/utils/z_color_util.dart';
 export 'package:zdl_flutter_package/utils/z_date_time_util.dart';
 export 'package:zdl_flutter_package/utils/z_device_info_util.dart';

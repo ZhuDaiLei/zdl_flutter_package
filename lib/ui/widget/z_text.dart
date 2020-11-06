@@ -50,9 +50,6 @@ class ZText extends StatelessWidget {
   final double drawablePadding;
   final bool isFill;
 
-  ///点击事件
-  final GestureTapCallback onTap;
-
   const ZText({
     @required this.text,
     this.fontColor,
@@ -83,7 +80,6 @@ class ZText extends StatelessWidget {
     this.drawableBottomPadding,
     this.drawablePadding,
     this.isFill,
-    this.onTap,
   });
 
   @override
@@ -160,15 +156,6 @@ class ZText extends StatelessWidget {
       ),
       child: (onlyRow || onlyColumn) ? drawableText : textWidget,
     );
-    Widget child;
-    if (onTap != null) {
-      child = InkWell(
-        onTap: onTap,
-        child: outerShell,
-      );
-    } else {
-      child = outerShell;
-    }
-    return child;
+    return outerShell;
   }
 }
