@@ -38,6 +38,21 @@ class ZText extends StatelessWidget {
   final BoxShape shape;
   final Gradient gradient;
 
+  ///上下左右图片
+  final Widget drawableStart;
+  final Widget drawableTop;
+  final Widget drawableEnd;
+  final Widget drawableBottom;
+  final double drawableStartPadding;
+  final double drawableTopPadding;
+  final double drawableEndPadding;
+  final double drawableBottomPadding;
+  final double drawablePadding;
+  final bool isFill;
+
+  ///点击事件
+  final GestureTapCallback onTap;
+
   const ZText({
     @required this.text,
     this.fontColor,
@@ -58,6 +73,17 @@ class ZText extends StatelessWidget {
     this.boxShadow,
     this.shape = BoxShape.rectangle,
     this.gradient,
+    this.drawableStart,
+    this.drawableTop,
+    this.drawableEnd,
+    this.drawableBottom,
+    this.drawableStartPadding,
+    this.drawableTopPadding,
+    this.drawableEndPadding,
+    this.drawableBottomPadding,
+    this.drawablePadding,
+    this.isFill,
+    this.onTap,
   });
 
   @override
@@ -68,11 +94,55 @@ class ZText extends StatelessWidget {
       overflow: overflow,
       maxLines: maxLines,
       style: TextStyle(
-          color: fontColor,
+        color: fontColor,
         fontSize: fontSize,
         fontWeight: fontWeight,
       ),
     );
+    bool onlyRow = (null != drawableStart || null != drawableEnd) &&
+        (null == drawableTop && null == drawableBottom);
+    bool onlyColumn = (null != drawableTop || null != drawableBottom) &&
+        (null == drawableStart && null == drawableEnd);
+    Widget onlyRowWidget = Row(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: <Widget>[
+        if (null != drawableStart) drawableStart,
+        SizedBox(
+            width: null == drawableStartPadding
+                ? drawablePadding
+                : drawableStartPadding),
+        isFill ? Expanded(child: textWidget) : textWidget,
+        SizedBox(
+            width: null == drawableEndPadding
+                ? drawablePadding
+                : drawableEndPadding),
+        if (null != drawableEnd) drawableEnd,
+      ],
+    );
+    Widget onlyColumnWidget = Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: <Widget>[
+        if (null != drawableTop) drawableTop,
+        SizedBox(
+            height: null == drawableTopPadding
+                ? drawablePadding
+                : drawableTopPadding),
+        isFill ? Expanded(child: textWidget) : textWidget,
+        SizedBox(
+            height: null == drawableBottomPadding
+                ? drawablePadding
+                : drawableBottomPadding),
+        if (null != drawableBottom) drawableBottom,
+      ],
+    );
+    Widget drawableText;
+    if (onlyRow) {
+      drawableText = onlyRowWidget;
+    } else if (onlyColumn) {
+      drawableText = onlyColumnWidget;
+    }
     var outerShell = Container(
       width: width,
       height: height,
@@ -88,8 +158,17 @@ class ZText extends StatelessWidget {
             ? null
             : DecorationImage(image: AssetImage(bgImg), fit: BoxFit.cover),
       ),
-      child: textWidget,
+      child: (onlyRow || onlyColumn) ? drawableText : textWidget,
     );
-    return outerShell;
+    Widget child;
+    if (onTap != null) {
+      child = InkWell(
+        onTap: onTap,
+        child: outerShell,
+      );
+    } else {
+      child = outerShell;
+    }
+    return child;
   }
 }
