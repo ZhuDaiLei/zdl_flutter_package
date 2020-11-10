@@ -20,8 +20,9 @@ class ZBaseViewModel with ChangeNotifier {
   ZBaseViewModel({
     ViewState viewState,
     BuildContext context,
-  })  : _viewState = (viewState ?? ViewState.idle),
-        context = context {
+  }) {
+    _viewState = (viewState ?? ViewState.idle);
+    context = context;
     debugPrint('ZBaseViewModel---constructor--->$runtimeType');
   }
 
