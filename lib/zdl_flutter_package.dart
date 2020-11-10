@@ -1,5 +1,8 @@
 library zdl_flutter_package;
 
+///extend
+export 'package:zdl_flutter_package/extend/custom_text_formatter.dart';
+
 ///extension
 export 'package:zdl_flutter_package/extension/extension_list.dart';
 export 'package:zdl_flutter_package/extension/extension_string.dart';
@@ -8,9 +11,6 @@ export 'package:zdl_flutter_package/extension/extension_text_editing_controller.
 ///painting
 export 'package:zdl_flutter_package/painting/z_dashed_decoration.dart';
 export 'package:zdl_flutter_package/painting/z_dashed_line.dart';
-
-///services
-export 'package:zdl_flutter_package/services/custom_text_formatter.dart';
 
 ///ui
 //base
