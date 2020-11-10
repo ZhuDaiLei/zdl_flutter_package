@@ -17,18 +17,18 @@ class ZProvider<T extends ChangeNotifier> extends StatefulWidget {
   final Function initState;
   final Function dispose;
 
-  const ZProvider(
-      {Key key,
-      @required this.builder,
-      @required this.model,
-      this.child,
-      this.onModelReady,
-      this.autoDispose: true,
-      this.autoInitState: true,
-      this.autoLoadData: true,
-      this.initState,
-      this.dispose})
-      : super(key: key);
+  const ZProvider({
+    Key key,
+    @required this.builder,
+    @required this.model,
+    this.child,
+    this.onModelReady,
+    this.autoDispose: true,
+    this.autoInitState: true,
+    this.autoLoadData: true,
+    this.initState,
+    this.dispose,
+  }) : super(key: key);
 
   @override
   _ZProviderState createState() => _ZProviderState();
@@ -67,6 +67,9 @@ class _ZProviderState<T extends ChangeNotifier> extends State<ZProvider<T>> {
 
   @override
   Widget build(BuildContext context) {
+    if (model is ZBaseViewModel) {
+      (model as ZBaseViewModel).setBuildContext(context);
+    }
     return ChangeNotifierProvider<T>.value(
       value: model,
       child: Consumer<T>(

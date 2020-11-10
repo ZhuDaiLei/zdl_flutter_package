@@ -50,8 +50,8 @@ class ZText extends StatelessWidget {
   final double drawablePadding;
   final bool isFill;
 
-  const ZText({
-    @required this.text,
+  const ZText(
+    this.text, {
     this.fontColor,
     this.fontSize,
     this.fontWeight,
@@ -79,7 +79,7 @@ class ZText extends StatelessWidget {
     this.drawableEndPadding,
     this.drawableBottomPadding,
     this.drawablePadding,
-    this.isFill,
+    this.isFill = false,
   });
 
   @override
