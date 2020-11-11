@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
-import 'package:zdl_flutter_package/zdl_flutter_package.dart';
+import '../dialog/z_dialog_hint.dart';
 
 /// @author zdl
 /// date 2020/11/9 16:42

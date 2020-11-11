@@ -1,4 +1,4 @@
-import 'package:zdl_flutter_package/extension/extension_string.dart';
+import 'extension_string.dart';
 
 /// @author zdl
 /// date 2020/11/10 16:00

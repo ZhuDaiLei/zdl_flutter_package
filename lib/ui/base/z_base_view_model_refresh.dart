@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
-import 'package:zdl_flutter_package/ui/base/z_base_view_model.dart';
+import 'z_base_view_model.dart';
 
 abstract class ZBaseViewModelRefresh<T> extends ZBaseViewModel {
   T data;

@@ -1,4 +1,3 @@
 import 'dart:developer' as developer;
 
-class ZLogUtil{
-}
+class ZLogUtil {}

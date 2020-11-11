@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:zdl_flutter_package/ui/widget/z_text.dart';
-import 'package:zdl_flutter_package/utils/z_color_util.dart';
+import '../widget/z_text.dart';
+import '../../utils/z_color_util.dart';
 
 /// @author zdl
 /// date 2020/11/9 16:49

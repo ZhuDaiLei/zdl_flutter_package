@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:zdl_flutter_package/ui/base/z_base_view_model.dart';
+import 'z_base_view_model.dart';
 
 /// @author zdl
 /// date 2020/11/6 16:36

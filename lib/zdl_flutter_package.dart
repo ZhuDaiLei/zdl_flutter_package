@@ -1,7 +1,9 @@
 library zdl_flutter_package;
 
 ///extend
-export 'package:zdl_flutter_package/extend/custom_text_formatter.dart';
+export 'package:zdl_flutter_package/extend/z_decimal_digits_text_input_formatter.dart';
+export 'package:zdl_flutter_package/extend/z_dashed_decoration.dart';
+export 'package:zdl_flutter_package/extend/z_under_line_tab_indicator.dart';
 
 ///extension
 export 'package:zdl_flutter_package/extension/extension_list.dart';
@@ -10,7 +12,6 @@ export 'package:zdl_flutter_package/extension/extension_string.dart';
 export 'package:zdl_flutter_package/extension/extension_text_editing_controller.dart';
 
 ///painting
-export 'package:zdl_flutter_package/painting/z_dashed_decoration.dart';
 export 'package:zdl_flutter_package/painting/z_dashed_line.dart';
 
 ///ui
@@ -34,9 +35,15 @@ export 'package:zdl_flutter_package/ui/widget/z_text.dart';
 export 'package:zdl_flutter_package/ui/widget/z_text_variable.dart';
 
 ///utils
+//copy
 export 'package:zdl_flutter_package/utils/copy/z_toast.dart';
+//utils
 export 'package:zdl_flutter_package/utils/z_color_util.dart';
+export 'package:zdl_flutter_package/utils/z_config.dart';
 export 'package:zdl_flutter_package/utils/z_date_time_util.dart';
 export 'package:zdl_flutter_package/utils/z_device_info_util.dart';
 export 'package:zdl_flutter_package/utils/z_global.dart';
 export 'package:zdl_flutter_package/utils/z_gps_util.dart';
+export 'package:zdl_flutter_package/utils/z_intent_util.dart';
+export 'package:zdl_flutter_package/utils/z_log_util.dart';
+export 'package:zdl_flutter_package/utils/z_number_util.dart';
