@@ -1,4 +1,7 @@
+import 'package:zdl_flutter_package/zdl_flutter_package.dart';
+
 import '../extension/extension_string.dart';
+import 'z_toast_util.dart';
 
 /// @author zdl
 /// date 2020/3/31 16:24
@@ -31,7 +34,7 @@ class ZGlobal {
     int now = DateTime.now().millisecondsSinceEpoch;
     if (now - _last > 1000) {
       _last = DateTime.now().millisecondsSinceEpoch;
-      if (null != onClickBack) onClickBack();
+      null != onClickBack ? onClickBack() : ZToastUtil.show('双击退出APP');
       return Future.value(false);
     } else {
       return Future.value(true);

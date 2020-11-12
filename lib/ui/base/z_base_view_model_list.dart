@@ -138,7 +138,7 @@ abstract class ZBaseViewModelList<T> extends ZBaseViewModel {
   });
 
   ///有上拉加载更多
-  bool hasMore();
+  bool hasMore() => true;
 
   @override
   void initState() {

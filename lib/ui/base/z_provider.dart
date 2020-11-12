@@ -7,8 +7,8 @@ import 'z_base_view_model.dart';
 /// email zdl328465042@163.com
 /// description Provider封装类
 class ZProvider<T extends ChangeNotifier> extends StatefulWidget {
-  final ValueWidgetBuilder<T> builder;
   final T model;
+  final ValueWidgetBuilder<T> builder;
   final Widget child;
   final Function(T model) onModelReady;
   final bool autoDispose;
@@ -19,8 +19,8 @@ class ZProvider<T extends ChangeNotifier> extends StatefulWidget {
 
   const ZProvider({
     Key key,
-    @required this.builder,
     @required this.model,
+    @required this.builder,
     this.child,
     this.onModelReady,
     this.autoDispose: true,
@@ -31,7 +31,7 @@ class ZProvider<T extends ChangeNotifier> extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _ZProviderState createState() => _ZProviderState();
+  _ZProviderState<T> createState() => _ZProviderState<T>();
 }
 
 class _ZProviderState<T extends ChangeNotifier> extends State<ZProvider<T>> {

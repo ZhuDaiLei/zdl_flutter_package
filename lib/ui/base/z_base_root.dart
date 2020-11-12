@@ -91,9 +91,9 @@ class _ZBaseRootState extends State<ZBaseRoot> {
     return (widget.canBack && widget.onWillPop == null)
         ? scaffold
         : WillPopScope(
-            onWillPop: !widget.canBack
-                ? () async => false
-                : widget.onWillPop,
+            onWillPop: widget.onWillPop != null
+                ? widget.onWillPop
+                : () async => false,
             child: scaffold,
           );
   }

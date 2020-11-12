@@ -17,10 +17,7 @@ class ZBaseViewModel with ChangeNotifier {
   BuildContext context;
   bool autoLoadData;
 
-  ZBaseViewModel({
-    ViewState viewState,
-    BuildContext context,
-  }) {
+  ZBaseViewModel({ViewState viewState, BuildContext context}) {
     _viewState = (viewState ?? ViewState.idle);
     context = context;
     debugPrint('ZBaseViewModel---constructor--->$runtimeType');

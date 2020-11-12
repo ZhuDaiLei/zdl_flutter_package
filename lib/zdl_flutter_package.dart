@@ -1,7 +1,8 @@
 library zdl_flutter_package;
 
 ///extend
-export 'package:zdl_flutter_package/extend/z_decimal_digits_text_input_formatter.dart';
+export 'package:zdl_flutter_package/extend/extend_text_input_formatter.dart';
+// export 'package:zdl_flutter_package/extend/z_dashed_border.dart';
 export 'package:zdl_flutter_package/extend/z_dashed_decoration.dart';
 export 'package:zdl_flutter_package/extend/z_under_line_tab_indicator.dart';
 
@@ -35,9 +36,6 @@ export 'package:zdl_flutter_package/ui/widget/z_text.dart';
 export 'package:zdl_flutter_package/ui/widget/z_text_variable.dart';
 
 ///utils
-//copy
-export 'package:zdl_flutter_package/utils/copy/z_toast.dart';
-//utils
 export 'package:zdl_flutter_package/utils/z_color_util.dart';
 export 'package:zdl_flutter_package/utils/z_config.dart';
 export 'package:zdl_flutter_package/utils/z_date_time_util.dart';

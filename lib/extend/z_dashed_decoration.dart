@@ -1,11 +1,14 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
+import 'z_dashed_border.dart';
 
 /// @author zdl
 /// date 2020/11/5 15:00
 /// email zdl328465042@163.com
 /// description 虚线边框
+@Deprecated('\n此方法不能设置圆角，请使用ZDashedBorder')
+///[ZDashedBorder]
 class ZDashedDecoration extends Decoration {
   final Color color;
   final DecorationImage image;
@@ -18,7 +21,7 @@ class ZDashedDecoration extends Decoration {
   final double strokeHeight;
   final double gap;
   final Color dashedColor;
-  final bool dawDashed;
+  final bool drawDashed;
 
   const ZDashedDecoration({
     this.color,
@@ -32,8 +35,9 @@ class ZDashedDecoration extends Decoration {
     this.strokeHeight = 1.0,
     this.gap = 5.0,
     this.dashedColor,
-    this.dawDashed = true,
+    this.drawDashed = true,
   })  : assert(shape != null),
+        assert(!drawDashed || drawDashed == (dashedColor != null), '画虚线时，dashedColor必须设置'),
         assert(
             backgroundBlendMode == null || color != null || gradient != null,
             "backgroundBlendMode applies to ZDashedDecoration's background color or "
@@ -323,7 +327,7 @@ class _BoxDecorationPainter extends BoxPainter {
     _paintShadows(canvas, rect, textDirection);
     _paintBackgroundColor(canvas, rect, textDirection);
     _paintBackgroundImage(canvas, rect, configuration);
-    if (_decoration.dawDashed != null && !_decoration.dawDashed) {
+    if (_decoration.drawDashed != null && !_decoration.drawDashed) {
       _decoration.border?.paint(
         canvas,
         rect,

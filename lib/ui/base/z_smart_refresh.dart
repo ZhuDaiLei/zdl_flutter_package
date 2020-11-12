@@ -25,7 +25,7 @@ class ZSmartRefresh extends StatelessWidget {
     @required this.controller,
     @required this.child,
     this.showNoDataWidget = false,
-    this.noDataMsg = '没有数据',
+    this.noDataMsg = '暂无数据',
     this.noDataWidget,
     this.loadMoreNoDataText,
     this.enableRefresh = true,
