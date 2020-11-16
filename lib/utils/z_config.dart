@@ -1,5 +1,5 @@
 class ZConfig{
-  bool isDebug = !bool.fromEnvironment('dart.vm.product');
+  static bool isDebug = !bool.fromEnvironment('dart.vm.product');
 
-  String appName({String appName = 'APP'}) => isDebug ? '$appName(debug)' : appName;
+  static String appName({String appName = 'APP'}) => isDebug ? '$appName(debug)' : appName;
 }

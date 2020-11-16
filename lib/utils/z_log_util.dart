@@ -1,3 +1,7 @@
-import 'dart:developer' as developer;
+import 'dart:developer';
 
-class ZLogUtil {}
+class ZLogUtil {
+  static i(String msg){
+    log(msg);
+  }
+}

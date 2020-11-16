@@ -22,14 +22,15 @@ class ZIntentUtil {
     bool finish = false,
     bool removeAll = false,
   }) {
-    if(routeName != null){
+    assert(!(routeName == null && widget == null), 'ZIntentUtil.push：routeName、widget不可同时为null');
+    if (routeName != null) {
       return _pushByName(
         ctx,
         routeName,
         finish: finish,
         removeAll: removeAll,
       );
-    }else if(widget != null){
+    } else {
       return _pushByWidget(
         ctx,
         widget,

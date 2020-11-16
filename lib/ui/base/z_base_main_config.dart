@@ -4,13 +4,13 @@ import 'package:flutter/material.dart';
 /// @author zdl
 /// date 2020/7/17 9:51
 /// email zdl328465042@163.com
-/// description 点击页面空白处隐藏软键盘，请在main.drat中进行全局配置
-class ZBaseBlankLoseFocus extends StatelessWidget {
+/// description 请在main.drat中进行全局配置，包含点击页面空白处隐藏软键盘
+class ZBaseMainConfig extends StatelessWidget {
   final Widget child;
   final String title;
   final ThemeData theme;
 
-  ZBaseBlankLoseFocus({
+  ZBaseMainConfig({
     @required this.child,
     this.title,
     this.theme,
