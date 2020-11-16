@@ -46,7 +46,7 @@ export 'package:zdl_flutter_package/ui/widget/z_text_variable.dart';
 
 ///utils
 export 'package:zdl_flutter_package/utils/z_color_util.dart';
-export 'package:zdl_flutter_package/utils/z_config.dart';
+export 'package:zdl_flutter_package/utils/z_config_util.dart';
 export 'package:zdl_flutter_package/utils/z_date_time_util.dart';
 export 'package:zdl_flutter_package/utils/z_device_info_util.dart';
 export 'package:zdl_flutter_package/utils/z_global.dart';
